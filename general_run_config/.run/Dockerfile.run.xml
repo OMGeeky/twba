@@ -1,0 +1,53 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="{replaceme}" />
+        <option name="buildArgs">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="PROGNAME" />
+              <option name="value" value="{replaceme}" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="buildKitEnabled" value="true" />
+        <option name="containerName" value="{replaceme}" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="TWBA_CONFIG" />
+              <option name="value" value="/twba/configs/config.toml" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="commandLineOptions" value="--restart=unless-stopped" />
+        <option name="showCommandPreview" value="true" />
+        <option name="sourceFilePath" value="Dockerfile" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/twba/configs/" />
+              <option name="hostPath" value="/twba/" />
+              <option name="readOnly" value="true" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/twba/tmp/" />
+              <option name="hostPath" value="/var/tmp/twba/" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/twba/data/" />
+              <option name="hostPath" value="/twba/data/" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/etc/ssl/certs" />
+              <option name="hostPath" value="/etc/ssl/certs" />
+              <option name="readOnly" value="true" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

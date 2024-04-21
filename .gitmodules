@@ -22,3 +22,6 @@
 [submodule "twba.backup_config"]
 	path = twba.backup_config
 	url = git@github.com:OMGeeky/backup_config.git
+[submodule "twba-code-receiver"]
+	path = twba-code-receiver
+	url = git@github.com:OMGeeky/twba.code-receiver.git
