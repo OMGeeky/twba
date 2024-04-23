@@ -25,3 +25,6 @@
 [submodule "twba-code-receiver"]
 	path = twba-code-receiver
 	url = git@github.com:OMGeeky/twba.code-receiver.git
+[submodule "twba.common"]
+	path = twba.common
+	url = git@github.com:OMGeeky/twba.common.git
