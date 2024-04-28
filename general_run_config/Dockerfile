@@ -1,4 +1,4 @@
-FROM lukemathwalker/cargo-chef:latest-rust-1 AS chef
+FROM lukemathwalker/cargo-chef:0.1.32-rust-1 AS chef
 WORKDIR /app
 
 FROM chef AS planner
@@ -23,10 +23,10 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
     cargo build --release --locked
 
 # We do not need the Rust toolchain to run the binary!
-FROM debian:bookworm AS runtime
+FROM debian:bookworm-20240423 AS runtime
 WORKDIR /app
 ARG PROGNAME
-RUN apt-get update && apt-get install -y libssl-dev coreutils
+RUN apt-get update && apt-get install -y libssl-dev coreutils ffmpeg
 # Create a script to run the command and sleep for one hour after the command is done
 RUN echo "#!/bin/bash \n \
           echo \"Running command: '$PROGNAME'\" \n \
