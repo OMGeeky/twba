@@ -28,3 +28,6 @@
 [submodule "twba.common"]
 	path = twba.common
 	url = git@github.com:OMGeeky/twba.common.git
+[submodule "twba-notifier"]
+	path = twba.notifier
+	url = git@github.com:OMGeeky/twba.notifier.git
