@@ -1,0 +1,102 @@
+name: twba
+
+services:
+  # --------------------------------------------------------------------------------
+  # Utility services
+  # --------------------------------------------------------------------------------
+  code-receiver:
+    ports:
+      - "7443:7443"
+    build:
+      context: ./twba-code-receiver
+      dockerfile: ./../general_run_config/Dockerfile
+      args:
+        - PROGNAME=twba-code-receiver
+    environment:
+      - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+    
+  notifier:
+    ports:
+      - "8081:8080"
+    build:
+      context: ./twba.notifier
+      dockerfile: ./../general_run_config/Dockerfile
+      args:
+        - PROGNAME=twba-notifier
+    environment:
+      - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+
+  # --------------------------------------------------------------------------------
+  # Actual services
+  # --------------------------------------------------------------------------------
+  twitch-fetcher:
+    build:
+        context: ./twba.fetcher
+        dockerfile: ./../general_run_config/Dockerfile
+        args:
+          - PROGNAME=twba-twitch-fetcher
+    environment:
+        - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+
+  downloader:
+    build:
+        context: ./twba.downloader
+        dockerfile: ./../general_run_config/Dockerfile
+        args:
+          - PROGNAME=twba-downloader
+    environment:
+        - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+
+  splitter:
+    build:
+        context: ./twba.splitter
+        dockerfile: ./../general_run_config/Dockerfile
+        args:
+          - PROGNAME=twba-splitter
+    environment:
+        - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+
+  uploader:
+    build:
+      context: ./twba.uploader
+      dockerfile: ./../general_run_config/Dockerfile
+      args:
+        - PROGNAME=twba-uploader
+    environment:
+      - TWBA_CONFIG=/twba/configs/config.toml
+    restart: unless-stopped
+    volumes:
+      - /twba/:/twba/configs/:ro
+      - /var/tmp/twba/:/twba/tmp/:rw
+      - /twba/data/:/twba/data/:rw
+      - /etc/ssl/certs:/etc/ssl/certs:ro
