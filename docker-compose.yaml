@@ -6,7 +6,7 @@ services:
   # --------------------------------------------------------------------------------
   code-receiver:
     ports:
-      - "7443:7443"
+      - "7443:3000"
     build:
       context: ./twba-code-receiver
       dockerfile: ./../general_run_config/Dockerfile
