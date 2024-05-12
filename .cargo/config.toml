@@ -1,0 +1,16 @@
+[net]
+git-fetch-with-cli = true
+
+#[patch."https://github.com/OMGeeky/backup_config.git"]
+#backup-config = { path = "../backup_config" }
+#
+#[patch."https://github.com/OMGeeky/twitch_backup.local_db.git"]
+#twba-local-db = { path = "../twitch_backup.local_db" }
+#
+#[patch."https://github.com/OMGeeky/twba_reqwest_backoff.git"]
+#reqwest-backoff = { path = "../reqwest_backoff" }
+
+[patch.crates-io]
+yup-oauth2 = { git = "https://github.com/dermesser/yup-oauth2.git", rev = "06d3b7e9d2553dc3ef836b559a84aab29edb86c3" }
+google-youtube3 = { version = "5.0.3", git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives" }
+google-apis-common = { version = "6.0.0", git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives" }

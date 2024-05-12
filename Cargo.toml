@@ -1,0 +1,19 @@
+[package]
+name = "twba"
+version = "0.1.0"
+edition = "2021"
+[workspace]
+members = [
+    "twba.common",
+    "twba.downloader",
+    "twba-code-receiver",
+    "twba.fetcher",
+    "twba.local_db",
+    "twba.notifier",
+    "twba.reqwest_backoff",
+    "twba.uploader",
+    "twba.splitter",
+]
+[dependencies]
+
+twba-common = { version = "0.2", git = "https://github.com/OMGeeky/twba.common.git" }
