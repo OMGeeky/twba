@@ -1,33 +1,33 @@
 [submodule "twitch_fetcher"]
-	path = twba.fetcher
+	path = twba-twitch-fetcher
 	url = git@github.com:OMGeeky/twba.twitch_fetcher.git
 [submodule "twitch_splitter"]
-	path = twba.splitter
+	path = twba-splitter
 	url = git@github.com:OMGeeky/twba.splitter.git
 [submodule "twba_reqwest_backoff"]
-	path = twba.reqwest_backoff
+	path = twba-reqwest_backoff
 	url = git@github.com:OMGeeky/twba_reqwest_backoff.git
 [submodule "twba.uploader"]
-	path = twba.uploader
+	path = twba-uploader
 	url = git@github.com:OMGeeky/twba.uploader.git
 [submodule "twitch_backup.local_db"]
-	path = twba.local_db
+	path = twba-local_db
 	url = git@github.com:OMGeeky/twitch_backup.local_db.git
 [submodule "twitch_data"]
 	path = twitch_data
 	url = git@github.com:OMGeeky/twitch_data.git
 [submodule "twba_downloader"]
-	path = twba.downloader
+	path = twba-downloader
 	url = git@github.com:OMGeeky/twba_downloader.git
 [submodule "twba.backup_config"]
-	path = twba.backup_config
+	path = twba-backup_config
 	url = git@github.com:OMGeeky/backup_config.git
 [submodule "twba-code-receiver"]
 	path = twba-code-receiver
 	url = git@github.com:OMGeeky/twba.code-receiver.git
 [submodule "twba.common"]
-	path = twba.common
+	path = twba-common
 	url = git@github.com:OMGeeky/twba.common.git
 [submodule "twba-notifier"]
-	path = twba.notifier
+	path = twba-notifier
 	url = git@github.com:OMGeeky/twba.notifier.git
