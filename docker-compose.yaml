@@ -8,8 +8,8 @@ services:
     ports:
       - "7443:3000"
     build:
-      context: ./twba-code-receiver
-      dockerfile: ./../general_run_config/Dockerfile
+      context: .
+      dockerfile: ./general_run_config/Dockerfile
       args:
         - PROGNAME=twba-code-receiver
     environment:
@@ -25,8 +25,8 @@ services:
     ports:
       - "8081:8080"
     build:
-      context: ./twba.notifier
-      dockerfile: ./../general_run_config/Dockerfile
+      context: .
+      dockerfile: ./general_run_config/Dockerfile
       args:
         - PROGNAME=twba-notifier
     environment:
@@ -43,8 +43,8 @@ services:
   # --------------------------------------------------------------------------------
   twitch-fetcher:
     build:
-        context: ./twba.fetcher
-        dockerfile: ./../general_run_config/Dockerfile
+        context: .
+        dockerfile: ./general_run_config/Dockerfile
         args:
           - PROGNAME=twba-twitch-fetcher
     environment:
@@ -58,8 +58,8 @@ services:
 
   downloader:
     build:
-        context: ./twba.downloader
-        dockerfile: ./../general_run_config/Dockerfile
+        context: .
+        dockerfile: ./general_run_config/Dockerfile
         args:
           - PROGNAME=twba-downloader
     environment:
@@ -73,8 +73,8 @@ services:
 
   splitter:
     build:
-        context: ./twba.splitter
-        dockerfile: ./../general_run_config/Dockerfile
+        context: .
+        dockerfile: ./general_run_config/Dockerfile
         args:
           - PROGNAME=twba-splitter
     environment:
@@ -88,8 +88,8 @@ services:
 
   uploader:
     build:
-      context: ./twba.uploader
-      dockerfile: ./../general_run_config/Dockerfile
+      context: .
+      dockerfile: ./general_run_config/Dockerfile
       args:
         - PROGNAME=twba-uploader
     environment:

@@ -11,6 +11,5 @@ git-fetch-with-cli = true
 #reqwest-backoff = { path = "../reqwest_backoff" }
 
 [patch.crates-io]
-yup-oauth2 = { git = "https://github.com/dermesser/yup-oauth2.git", rev = "06d3b7e9d2553dc3ef836b559a84aab29edb86c3" }
-google-youtube3 = { version = "5.0.3", git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives" }
-google-apis-common = { version = "6.0.0", git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives" }
+google-youtube3 = { git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives-yt" }
+google-apis-common = { git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives-yt" }
