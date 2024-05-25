@@ -1,15 +1,6 @@
 [net]
 git-fetch-with-cli = true
 
-#[patch."https://github.com/OMGeeky/backup_config.git"]
-#backup-config = { path = "../backup_config" }
-#
-#[patch."https://github.com/OMGeeky/twitch_backup.local_db.git"]
-#twba-local-db = { path = "../twitch_backup.local_db" }
-#
-#[patch."https://github.com/OMGeeky/twba_reqwest_backoff.git"]
-#reqwest-backoff = { path = "../reqwest_backoff" }
-
 [patch.crates-io]
 google-youtube3 = { git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives-yt" }
 google-apis-common = { git = "https://github.com/OMGeeky/google-apis-rs.git", branch = "scope-derives-yt" }
