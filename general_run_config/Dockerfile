@@ -1,4 +1,4 @@
-FROM lukemathwalker/cargo-chef:0.1.66-rust-1 AS chef
+FROM lukemathwalker/cargo-chef:0.1.67-rust-1.78 AS chef
 WORKDIR /app
 ARG PROGNAME
 
