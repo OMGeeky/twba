@@ -13,6 +13,7 @@ members = [
     "twba-reqwest_backoff",
     "twba-uploader",
     "twba-splitter",
+    "twitch_data",
 ]
 [dependencies]
 
