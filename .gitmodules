@@ -31,6 +31,3 @@
 [submodule "twba-notifier"]
 	path = twba-notifier
 	url = git@github.com:OMGeeky/twba.notifier.git
-[submodule "twba-yt-publisher"]
-	path = twba-yt-publisher
-	url = ./twba-yt-publisher
