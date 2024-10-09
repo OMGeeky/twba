@@ -31,3 +31,6 @@
 [submodule "twba-notifier"]
 	path = twba-notifier
 	url = git@github.com:OMGeeky/twba.notifier.git
+[submodule "twba-control-center"]
+	path = twba-control-center
+	url = ./twba-control-center

@@ -15,6 +15,7 @@ members = [
     "twba-splitter",
     "twitch_data",
 #    "twba-yt-publisher",
+    "twba-control-center",
 ]
 [dependencies]
 
