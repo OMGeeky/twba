@@ -19,4 +19,4 @@ members = [
 ]
 
 [workspace.dependencies]
-twba-common = { version = "0.2", git = "https://github.com/OMGeeky/twba.common.git" }
+twba-common = { version = "0.3", git = "https://github.com/OMGeeky/twba.common.git" }
