@@ -17,6 +17,6 @@ members = [
 #    "twba-yt-publisher",
     "twba-control-center",
 ]
-[dependencies]
 
+[workspace.dependencies]
 twba-common = { version = "0.2", git = "https://github.com/OMGeeky/twba.common.git" }
